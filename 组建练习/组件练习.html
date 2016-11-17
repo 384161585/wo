@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/zjlx.css"/>
+		<script src="js/jquery-1.11.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zjlx.js" type="text/javascript" charset="utf-8"></script>			
+	</head>
+	<body>
+		<div class="superbox">	
+			<div class="bigbox">
+				<div class="box move1">
+					<div class="top">
+						<span class="title">
+							123
+						</span>
+						<a href="javascript:;" class="close">
+							X
+						</a>
+					</div>
+					
+					<input type="text" placeholder="请输入账号" class="text input"/>
+					
+					<input type="press" placeholder="请输入密码" class="press input"/>
+					
+					<a href="javascript:;" class="login">登录</a>
+				</div>
+			</div>
+		</div>
+		
+<script type="text/javascript">					
+	var zjlx = $('.superbox').zjlx({
+    	width:400,
+    	height:400,
+    	move:'move2',
+    	
+	    ocb:function(){
+	    	alert('打开后执行的函数！');
+	    },
+	    
+	    ccb:function(){
+			alert('关闭后执行的函数！');
+		}
+	});
+	
+	zjlx.open();
+</script>
+	</body>
+</html>
